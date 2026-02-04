@@ -49,6 +49,15 @@ app.use((req, res, next) => {
   next();
 });
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({ 
+    status: "ok", 
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
 // 3. Endpoint
 app.post("/device/real/query", (req, res) => {
   const { sn_list } = req.body;
