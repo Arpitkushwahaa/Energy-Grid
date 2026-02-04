@@ -5,8 +5,8 @@ const axios = require('axios');
  * Configuration for the EnergyGrid API
  */
 const CONFIG = {
-  API_URL: 'http://localhost:3000/device/real/query',
-  TOKEN: 'interview_token_123',
+  API_URL: process.env.API_URL || 'http://localhost:3000/device/real/query',
+  TOKEN: process.env.TOKEN || 'interview_token_123',
   RATE_LIMIT_MS: 1000,  // 1 request per second
   BATCH_SIZE: 10,       // Max 10 devices per request
   MAX_RETRIES: 3,       // Max retry attempts for failed requests
