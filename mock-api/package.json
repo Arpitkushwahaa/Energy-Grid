@@ -1,0 +1,16 @@
+{
+  "name": "energygrid-mock-api",
+  "version": "1.0.0",
+  "description": "Mock API for EnergyGrid Data Aggregator Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
